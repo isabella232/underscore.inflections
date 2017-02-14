@@ -1,5 +1,5 @@
 {
-  "name": "underscore.inflections",
+  "name": "underscore.inflections-looker",
   "description": "Port of ActiveSupport::Inflector::Inflections for underscore.js",
   "version": "0.2.1",
   "keywords": ["inflections", "inflector", "underscore"],
@@ -11,8 +11,7 @@
     "url": "http://github.com/geetarista/underscore.inflections.git"
   },
   "dependencies": {
-    "underscore": ">=1.0",
-    "underscore.string": ">=2.0.0"
+    "underscore.string": "3.3.3"
   },
   "devDependencies": {
     "chai": "~1.0",

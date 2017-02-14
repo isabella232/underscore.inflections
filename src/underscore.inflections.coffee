@@ -252,22 +252,13 @@ class Inflections
             break
         result
 
-# Export to window or exports
-root = exports ? @
-
-# Require underscore
-_ = root._ or require 'underscore'
-
-# Require underscore.string
-if require?
+extender = (_) ->
+  # Require underscore.string
   _.str = require 'underscore.string'
   _.mixin _.str.exports()
   _.str.include 'Underscore.string', 'string'
-else
-  _.mixin _.str.exports()
+  i = new Inflections()
+  _.mixin i
+  return i
 
-# Include Inflections as a mixin to underscore
-if typeof exports is 'undefined'
-  _.mixin new Inflections
-else
-  module.exports = new Inflections
+module.exports = extender
